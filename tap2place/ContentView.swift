@@ -12,7 +12,7 @@ struct ContentView: View {
   var body: some View {
     ZStack {
       ARViewContainer().edgesIgnoringSafeArea(.all)
-      Text("こんにちは、AR")
+      Text("こんにちは、ARXR")
         .font(.largeTitle)
         .background(Color.white.opacity(0.7))
         .cornerRadius(10)
