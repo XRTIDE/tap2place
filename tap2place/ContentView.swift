@@ -10,12 +10,18 @@ import SwiftUI
 
 struct ContentView: View {
   var body: some View {
-    ARViewContainer().edgesIgnoringSafeArea(.all)
+    ZStack {
+      ARViewContainer().edgesIgnoringSafeArea(.all)
+      Text("Hello, AR!")
+        .font(.largeTitle)
+        .background(Color.white.opacity(0.7))
+        .cornerRadius(10)
+    }
+
   }
 }
 
 struct ARViewContainer: UIViewRepresentable {
-
   func makeUIView(context: Context) -> ARView {
 
     let arView = ARView(frame: .zero)
