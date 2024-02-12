@@ -5,8 +5,13 @@
 //  Created by yyx on 2024/02/12.
 //
 
-#ifndef Person_h
-#define Person_h
+/// hpp
+#include <stdio.h>
+#include <string>
 
-
-#endif /* Person_h */
+struct Person {
+  std::string name;
+  int age;
+};
+// 関数'createPerson'の宣言
+std::vector<Person> allPerson();

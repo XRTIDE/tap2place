@@ -17,10 +17,8 @@ struct ContentView: View {
         .background(Color.white.opacity(0.7))
         .cornerRadius(10)
     }
-
   }
 }
-
 struct ARViewContainer: UIViewRepresentable {
   func makeUIView(context: Context) -> ARView {
 
@@ -45,7 +43,18 @@ struct ARViewContainer: UIViewRepresentable {
 
   }
 
-  func updateUIView(_ uiView: ARView, context: Context) {}
+  func updateUIView(_ uiView: ARView, context: Context) {
+    test()
+  }
+
+}
+
+func test() {
+  // 直接访问C++代码
+  let person: Person = Person(name: "yyx", age: 18)
+  for person in allPerson() {
+    print(person.name, person.age)
+  }
 
 }
 

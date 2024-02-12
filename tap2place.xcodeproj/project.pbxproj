@@ -11,6 +11,7 @@
 		47AAEEEA2B727AC700F927BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AAEEE92B727AC700F927BD /* ContentView.swift */; };
 		47AAEEEC2B727AC800F927BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47AAEEEB2B727AC800F927BD /* Assets.xcassets */; };
 		47AAEEEF2B727AC800F927BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47AAEEEE2B727AC800F927BD /* Preview Assets.xcassets */; };
+		47C77FB42B7A65A800AA9B9E /* model_loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47C77FB32B7A65A800AA9B9E /* model_loader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,9 @@
 		47AAEEE92B727AC700F927BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		47AAEEEB2B727AC800F927BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47AAEEEE2B727AC800F927BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		47C77FB22B7A65A800AA9B9E /* tap2place-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tap2place-Bridging-Header.h"; sourceTree = "<group>"; };
+		47C77FB32B7A65A800AA9B9E /* model_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = model_loader.cpp; sourceTree = "<group>"; };
+		47C77FB92B7A68D300AA9B9E /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +56,12 @@
 			isa = PBXGroup;
 			children = (
 				47AAEEE72B727AC700F927BD /* AppDelegate.swift */,
+				47C77FB92B7A68D300AA9B9E /* Person.h */,
+				47C77FB32B7A65A800AA9B9E /* model_loader.cpp */,
 				47AAEEE92B727AC700F927BD /* ContentView.swift */,
 				47AAEEEB2B727AC800F927BD /* Assets.xcassets */,
 				47AAEEED2B727AC800F927BD /* Preview Content */,
+				47C77FB22B7A65A800AA9B9E /* tap2place-Bridging-Header.h */,
 			);
 			path = tap2place;
 			sourceTree = "<group>";
@@ -99,6 +106,7 @@
 				TargetAttributes = {
 					47AAEEE32B727AC700F927BD = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 				};
 			};
@@ -137,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C77FB42B7A65A800AA9B9E /* model_loader.cpp in Sources */,
 				47AAEEEA2B727AC700F927BD /* ContentView.swift in Sources */,
 				47AAEEE82B727AC700F927BD /* AppDelegate.swift in Sources */,
 			);
@@ -148,7 +157,7 @@
 		47AAEEF02B727AC800F927BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -204,14 +213,16 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		47AAEEF12B727AC800F927BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -260,6 +271,8 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -269,6 +282,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tap2place/Preview Content\"";
@@ -290,6 +304,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xrtide.tap2place;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "tap2place/tap2place-Bridging-Header.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,6 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tap2place/Preview Content\"";
@@ -321,6 +339,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xrtide.tap2place;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "tap2place/tap2place-Bridging-Header.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
